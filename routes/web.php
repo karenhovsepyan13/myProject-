@@ -12,10 +12,10 @@ use App\Http\Controllers\TicTacToeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::post('/tictactoe/handleMove', [TicTacToeController::class, 'handleMove'])
-    ->name('tictactoe.handleMove');
 Route::get('/tictactoe', [TicTacToeController::class, 'index'])
     ->name('tictactoe.index');
+Route::post('/tictactoe/handleMove', [TicTacToeController::class, 'handleMove'])
+    ->name('tictactoe.handleMove');
 Route::get('/tictactoe/clear', [TicTacToeController::class, 'clearGameData'])
     ->name('tictactoe.clearGameData');
 Route::post('/tictactoe/play', [TicTacToeController::class, 'play'])
